@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects and Arrays</title>
+</head>
+
+<body>
+
+<h1>Objects and Arrays in JavaScript</h1>
+
+<h3>Object Details:</h3>
+<p id="objectOutput"></p>
+
+<h3>Array Details:</h3>
+<p id="arrayIndex"></p>
+<p id="arrayJoin"></p>
+<p id="arrayPop"></p>
+
+<script>
+
+    var student = {
+        name: "Rahul",
+        age: 15,
+        grade: "10th"
+    };
+
+    document.getElementById("objectOutput").innerHTML =
+        "Name: " + student.name + "<br>" +
+        "Age: " + student.age + "<br>" +
+        "Grade: " + student.grade;
+
+    var fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    document.getElementById("arrayIndex").innerHTML =
+        "First fruit: " + fruits[0] + "<br>" +
+        "Second fruit: " + fruits[1];
+
+    document.getElementById("arrayJoin").innerHTML =
+        "All fruits (joined): " + fruits.join(", ");
+
+    var removedFruit = fruits.pop();
+    document.getElementById("arrayPop").innerHTML =
+        "Removed fruit using pop(): " + removedFruit +
+        "<br>Remaining fruits: " + fruits.join(", ");
+</script>
+
+</body>
+</html>

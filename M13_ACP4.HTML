@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Arguments & Trigonometric Values</title>
+</head>
+
+<body>
+
+<h1>Sum of Arguments & Trigonometric Values</h1>
+
+<p id="sumResult"></p>
+<p id="trigValues"></p>
+
+<script>
+    function sumAll() {
+        var total = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            total += arguments[i];
+        }
+        return total;
+    }
+
+    // Calling function with multiple arguments
+    var result = sumAll(10, 20, 30, 40);
+    document.getElementById("sumResult").innerHTML =
+    "Sum of arguments is: " + result;
+
+    var degree = 30;
+
+    // Convert degree to radians
+    var radian = degree * (Math.PI / 180);
+
+    var sinValue = Math.sin(radian);
+    var cosValue = Math.cos(radian);
+    var tanValue = Math.tan(radian);
+
+    document.getElementById("trigValues").innerHTML =
+    "For " + degree + "°:<br>" +
+    "Sin value: " + sinValue + "<br>" +
+    "Cos value: " + cosValue + "<br>" +
+    "Tan value: " + tanValue;
+</script>
+
+</body>
+</html>

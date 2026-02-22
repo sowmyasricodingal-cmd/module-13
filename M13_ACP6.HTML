@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessing DOM Title</title>
+</head>
+
+<body>
+
+<h1 id="mainTitle">Welcome to JavaScript DOM</h1>
+
+<button onclick="getTitleText()">Click to Display Title</button>
+
+<p id="para1"></p>
+<p id="para2"></p>
+
+<script>
+    function getTitleText() {
+        // Accessing the title using DOM node structure
+        var titleText = document.getElementById("mainTitle").childNodes[0].nodeValue;
+
+        // Displaying the same text in two paragraphs
+        document.getElementById("para1").innerHTML = titleText;
+        document.getElementById("para2").innerHTML = titleText;
+    }
+</script>
+
+</body>
+</html>
