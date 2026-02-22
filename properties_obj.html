@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Properties of Object</title>
+</head>
+
+<body>
+
+<h2>JavaScript Object Properties</h2>
+
+<p id="output"></p>
+
+<script>
+    // Creating an object
+    var student = {
+        name: "Anaya",
+        age: 14,
+        grade: "9th"
+    };
+
+    // Accessing properties
+    var studentName = student.name;        // Dot notation
+    var studentAge = student["age"];       // Bracket notation
+
+    // Modifying a property
+    student.grade = "10th";
+
+    // Adding a new property
+    student.school = "ABC High School";
+
+    // Displaying values
+    document.getElementById("output").innerHTML =
+        "Name: " + studentName + "<br>" +
+        "Age: " + studentAge + "<br>" +
+        "Updated Grade: " + student.grade + "<br>" +
+        "School: " + student.school;
+</script>
+
+</body>
+</html>
